@@ -1,7 +1,14 @@
 //where we do some free programming!
 
-let letters = location.hash.slice(1)
-letterArray = letters.split("");
+letterArray = [1,2,3,4,5]
+
+if(location.hash === "") {
+    letterArray = ['J','O', 'H', 'A', 'N']
+}else{
+    let letters = location.hash.slice(1)
+    letterArray = letters.split("");    
+}
+
 
 console.log(letterArray)
 const mapped = letterArray.map((letter) => {
@@ -13,7 +20,8 @@ const newMapping = letterArray.filter((letter) => {
 }); //filters out letters
 
 let newNewMapping = letterArray.reduce((acc, current) => acc+ current) 
-// gör en sträng i detta fallet. om det är tal så adderas de! beroende på vad man använder för operator!
+// gör en sträng i detta fallet. 
+// om det är tal så adderas de! beroende på vad man använder för operator!
 
 console.log(mapped) //log
 
@@ -48,6 +56,5 @@ butt.addEventListener('click', function(e){
     theDiv.appendChild(ul)
 });
 
-// vad är det som inte funkar?
-// När jag trycker på knappen så vill jag att den ska visa upp arrayen mapped som en lista men det händer inget
+
 
