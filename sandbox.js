@@ -10,9 +10,12 @@ const newMapping = letters.filter((letter) => {
     if(letter === 'h') return true;
 }); //filters out letters
 
-let newNewMapping = letters.reduce((acc, current) => acc+ current)
+let newNewMapping = letters.reduce((acc, current) => acc+ current) 
+// gör en sträng i detta fallet. om det är tal så adderas de! beroende på vad man använder för operator!
 
 console.log(mapped) //log
+
+//testar time
 
 console.time(); //time
 for (let i = 0; i < 1000000; i++) {
@@ -20,29 +23,29 @@ for (let i = 0; i < 1000000; i++) {
 }
 console.timeEnd();//time End
 
+//här visar vi en tabell. 
+
 take = [{'name': 'Johan', 'Ranking':2},{'name': 'Joan', 'Ranking':1}]
-console.table(take) //table!
-
-const ul = document.createElement('ul'); //create a unordered list!
-const theDiv = document.querySelector('.theList');
-
-mapped.forEach(element => {
-    const li = document.createElement('li');
-    const button = document.createElement('button');
-    button.innerText = element;
-    button.classList.add("button"); //well..
-    
-    li.appendChild(button);//adding the button to the list element
-    ul.appendChild(li);
-});
-
-theDiv.appendChild(ul);
+console.table(take); //table!
 
 
 const butt = document.getElementById('btn');
 
-butt.addEventListener('click', function (e){
-    alert("hello");
+butt.addEventListener('click', function(e){
+    console.log('asdf')
+
+    const theDiv = document.querySelector('.theList');
+    const ul = document.createElement('ul');
+
+    mapped.forEach(element => {
+        const li = document.createElement('li');
+        li.innerHTML = element;
+        ul.appendChild(li)
+    });
+
+    theDiv.appendChild(ul)
 });
 
+// vad är det som inte funkar?
+// När jag trycker på knappen så vill jag att den ska visa upp arrayen mapped som en lista men det händer inget
 
