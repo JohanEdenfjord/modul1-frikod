@@ -1,16 +1,18 @@
 //where we do some free programming!
 
-let letters = ['j', 'o', 'h', 'a', 'n'];
+let letters = location.hash.slice(1)
+letterArray = letters.split("");
 
-const mapped = letters.map((letter) => {
+console.log(letterArray)
+const mapped = letterArray.map((letter) => {
     return "a" + letter + "h"
 }); //adds stuff to the strings in the Array
 
-const newMapping = letters.filter((letter) => {
+const newMapping = letterArray.filter((letter) => {
     if(letter === 'h') return true;
 }); //filters out letters
 
-let newNewMapping = letters.reduce((acc, current) => acc+ current) 
+let newNewMapping = letterArray.reduce((acc, current) => acc+ current) 
 // gör en sträng i detta fallet. om det är tal så adderas de! beroende på vad man använder för operator!
 
 console.log(mapped) //log
