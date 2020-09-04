@@ -12,7 +12,7 @@ if(location.hash === "") {
 
 console.log(letterArray)
 const mapped = letterArray.map((letter) => {
-    return "a" + letter + "h"
+    return "1" + letter + "1"
 }); //adds stuff to the strings in the Array
 
 const newMapping = letterArray.filter((letter) => {
@@ -55,6 +55,3 @@ butt.addEventListener('click', function(e){
 
     theDiv.appendChild(ul)
 });
-
-
-
